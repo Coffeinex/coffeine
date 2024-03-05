@@ -14,10 +14,7 @@ public class sqr {
         try {
             int num0 = Integer.parseInt(numstr0);
             int num2 = Integer.parseInt(numstr2);
-            if (num2 == 0) {
-                System.out.println("Не удалось получить число из выражения");
-                return;
-            }
+            
             switch (numstr1) {
                 case "+": {
                     int res = num0 + num2;
@@ -36,6 +33,10 @@ public class sqr {
                 }
                 case "/": {
                     int res = num0 / num2;
+                    if (num2 == 0) {
+                        System.out.println("Не удалось получить число из выражения");
+                        return;
+                            }
                     System.out.print("Результат: " + res);
                     break;
                 }
@@ -48,7 +49,6 @@ public class sqr {
             return;
         }
 
-
-
     }
+
 }
